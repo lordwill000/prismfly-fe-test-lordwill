@@ -1,0 +1,25 @@
+.button {
+  @include transition;
+  @include border($color: transparent);
+
+  align-items: center;
+  background-color: theme('colors.forest-green');
+  border-radius: 50px;
+  color: theme('colors.primary');
+  display: inline-flex;
+  font-family: theme('fontFamily.primary');
+  font-weight: theme('fontWeight.semibold');
+  font-size: 1.125rem;
+  justify-content: center;
+  line-height: 130%;
+  min-width: 280px;
+  padding: 0.7188rem;
+  text-decoration: none;
+
+  &:hover {
+    background-color: theme('colors.primary');
+    border-color: theme('colors.forest-green');
+    color: theme('colors.forest-green');
+    text-decoration: none;
+  }
+}

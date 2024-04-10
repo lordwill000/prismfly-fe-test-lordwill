@@ -5,3 +5,31 @@
   top: 0;
   width: 100%;
 }
+
+
+@mixin border(
+  $size: thin,
+  $type: solid,
+  $color: theme('colors.forest-green'),
+  $position: all
+) {
+  @if $position == all {
+    border: $size $type $color;
+  } @else {
+    border-#{$position}: $size $type $color;
+  }
+}
+
+@mixin transition(
+  $property: #{color,
+  background-color},
+  $duration: 0.2,
+  $timing-function: theme("transitionTimingFunction.in-out-expo"),
+  $delay: 0
+) {
+  transition-duration: #{$duration}s;
+  transition-property: $property;
+  transition-timing-function: $timing-function;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  transition-delay: #{$delay}s;
+}
