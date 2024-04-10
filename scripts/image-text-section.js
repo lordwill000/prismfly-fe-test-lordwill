@@ -97,16 +97,30 @@ export class ImageTextSection extends HTMLElement {
   }
 
   initSlick () {
-    this.slick = $(this).slick({
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: 'unslick'
+    let isSlickInitialized = false
+
+    const matchMediaQuery = window.matchMedia('(max-width: 1023px)')
+
+    const handleViewportChange = (mediaQuery) => {
+      if (mediaQuery.matches) {
+        if (!isSlickInitialized) {
+          $(this).slick({
+            arrows: false,
+            adaptiveHeight: true,
+            dots: true
+          })
+          isSlickInitialized = true
         }
-      ],
-      arrows: false,
-      adaptiveHeight: true,
-      dots: true
-    })
+      } else {
+        if (isSlickInitialized) {
+          $(this).slick('unslick')
+          isSlickInitialized = false
+        }
+      }
+    }
+
+    handleViewportChange(matchMediaQuery)
+
+    matchMediaQuery.addListener(handleViewportChange)
   }
 }
