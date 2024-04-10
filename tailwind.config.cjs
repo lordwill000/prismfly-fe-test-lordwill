@@ -20,10 +20,12 @@ module.exports = {
       sunset: '#D4491B'
     },
     fontSize: {
-
+      default: '1.25rem',
+      h2: '2rem',
+      'h2-mobile': '3.125rem',
+      h3: '1.25rem'
     },
     extend: {
-      // Add fonts here
       fontFamily: {
         primary: ['indivisible', ...defaultTheme.fontFamily.serif],
         secondary: ['turnip', ...defaultTheme.fontFamily.sans]
@@ -31,7 +33,9 @@ module.exports = {
       height: {
       },
       lineHeight: {
-
+        default: '150%',
+        h2: '120%',
+        h3: '130%'
       },
       screens: {
       },

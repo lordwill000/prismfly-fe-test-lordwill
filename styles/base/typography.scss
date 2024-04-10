@@ -1,0 +1,35 @@
+* {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+
+body {
+  color: theme('colors.secondary');
+  font-family: theme('fontFamily.secondary');
+  font-size: theme('fontSize.default');
+  line-height: theme('lineHeight.default');
+}
+
+@for $i from 1 through 6 {
+  h#{$i}, .h#{$i} {
+    font-family: theme('fontFamily.primary');
+  }
+}
+
+h2, .h2 {
+  font-size: theme('fontSize.h2-mobile');
+  font-weight: theme('fontWeight.bold');
+  letter-spacing: 0.1px;
+  line-height: theme('lineHeight.h2');
+
+  @screen lg {
+    font-size: theme('fontSize.h2');
+  }
+}
+
+h3, .h3 {
+  font-size: theme('fontSize.h3');
+  font-weight: theme('fontWeight.semibold');
+  line-height: theme('lineHeight.h3');
+}
