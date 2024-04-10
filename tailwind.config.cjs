@@ -18,12 +18,15 @@ module.exports = {
       tertiary: '#FFF',
       'forest-green': '#292D33',
       charcoal: '#202020',
-      sunset: '#D4491B'
+      sunset: '#D4491B',
+      dark: '#000',
+      disabled: '#DAD9D8'
     },
     fontSize: {
       default: '1.25rem',
-      h2: '2rem',
-      'h2-mobile': '3.125rem',
+      'default-mobile': '1.0625rem',
+      h2: '3.125rem',
+      'h2-mobile': '2rem',
       h3: '1.25rem'
     },
     extend: {

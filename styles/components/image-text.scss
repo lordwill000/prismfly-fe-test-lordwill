@@ -1,10 +1,42 @@
 .image-text {
+  $self: &;
+
   background-color: theme('colors.tertiary');
-  padding: theme('padding.2') 0.875rem;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  &--content-right {
+    @screen lg {
+      padding-left: theme('padding[2.5]');
+      padding-right: theme('padding.10');
+    }
+  }
+
+  &--content-left {
+    @screen lg {
+      padding-left: theme('padding.10');
+      padding-right: theme('padding[2.5]');
+    }
+
+    #{$self}__image {
+      order: 1;
+
+      @screen lg {
+        order: 2;
+      }
+    }
+
+    #{$self}__content-wrapper {
+      order: 2;
+
+      @screen lg {
+        order: 1;
+      }
+    }
+  }
 
   @screen lg {
     align-items: center;
-    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 0;
   }
@@ -22,29 +54,24 @@
   }
 
   &__content-wrapper {
+    @include border($color: theme('colors.dark/7%'));
+  
     background-color: theme('colors.primary');
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: 0 0 15px theme('colors.dark/10%');
     padding: theme('padding.7') 0;
 
     @screen lg {
+      border: none;
+      box-shadow: none;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
       height: 100%;
       padding: 4.5rem 5.75rem;
-    }
-
-    &--right {
-      @screen lg {
-        padding-left: theme('padding[2.5]');
-        padding-right: theme('padding.10');
-      }
-    }
-
-    &--left {
-      @screen lg {
-        padding-left: theme('padding.10');
-        padding-right: theme('padding[2.5]');
-      }
     }
   }
 

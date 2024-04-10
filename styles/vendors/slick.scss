@@ -1,0 +1,31 @@
+.slick-dots {
+  align-items: center;
+  display: flex;
+  gap: theme('spacing[1.5]');
+  justify-content: center;
+  margin: theme('margin.4') 0;
+
+  button {
+    @include transition($property: #{background-color, border-radius, width});
+
+    background-color: theme('colors.disabled');
+    border-radius: 50%;
+    font-size: 0;
+    height: 8px;
+    width: 8px;
+
+    &:hover {
+      background-color: theme('colors.sunset');
+    }
+  
+  }
+
+  .slick-active {
+    button {
+      background-color: theme('colors.sunset');
+      border-radius: 8px;
+      width: 28px;
+    }
+  }
+  
+}

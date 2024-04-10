@@ -7,8 +7,12 @@
 body {
   color: theme('colors.secondary');
   font-family: theme('fontFamily.secondary');
-  font-size: theme('fontSize.default');
+  font-size: theme('fontSize.default-mobile');
   line-height: theme('lineHeight.default');
+
+  @screen lg {
+    font-size: theme('fontSize.default');
+  }
 }
 
 @for $i from 1 through 6 {
