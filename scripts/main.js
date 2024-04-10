@@ -1,3 +1,5 @@
 import '@styles/main.scss'
 
-console.log('test')
+import { ImageTextSection } from './image-text-section'
+
+customElements.define('image-text-section', ImageTextSection)

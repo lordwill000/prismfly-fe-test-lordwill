@@ -7,6 +7,10 @@
   '@styles/base/mixins',
   '@styles/base/typography';
 
-// buttons
+// elements
 @import 
-  '@styles/components/buttons';
+  '@styles/elements/buttons';
+
+// components
+@import 
+  '@styles/components/image-text';
