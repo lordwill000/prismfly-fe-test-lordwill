@@ -13,10 +13,14 @@ module.exports = {
       padding: '1rem'
     },
     colors: {
-      
+      primary: '#F3F4EC',
+      secondary: '#6C6E71',
+      'forest-green': '#292D33',
+      charcoal: '#202020',
+      sunset: '#D4491B'
     },
     fontSize: {
-      
+
     },
     extend: {
       // Add fonts here
@@ -27,7 +31,7 @@ module.exports = {
       height: {
       },
       lineHeight: {
-        
+
       },
       screens: {
       },
